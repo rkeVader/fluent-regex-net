@@ -42,7 +42,14 @@ Example Usage:
             {
                 // We Have a Valid Password!
             }
-                
+
+            // ...
+
+            // loop through all matches
+            foreach (Match m in fr.Matches(somesamplestring))
+            {
+
+            }
 ```
 ### VB.NET  
 ```VB.NET
@@ -69,4 +76,11 @@ Example Usage:
         If p.IsMatch("AbcDef123") Then
             ' We have a valid password
         End If
+
+        ' ...
+
+        ' Loop through all matchges
+        For Each m As Match In p.Matches
+
+        Next        
 ```
