@@ -9,7 +9,8 @@ enable newer users to leverage the power of RegExes.
 This class is not considered complete and will likely evolve as my needs do, and as I receive feedback from 
 other developers. I have both VB.NET and C# versions of the same class. To use, just include the file of your choice in your project. Then...  
 
-Example Usage:  
+Example Usage (both generate the RegEx pattern /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,12}$/):  
+
 ### C#  
 ```c#
             // Build RegEx pattern for password validation  
@@ -80,7 +81,7 @@ Example Usage:
         ' ...
 
         ' Loop through all matchges
-        For Each m As Match In p.Matches
+        For Each m As Match In p.Matches(SomeSampleString)
 
         Next        
 ```
