@@ -87,3 +87,24 @@ Example Usage (both generate the RegEx pattern /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).
 
         Next        
 ```
+
+## HTML Tag Matching  
+So  parsing HTML isn't always the best use of RegExes, but they do pose an excellent example of group and backreferences.  
+### C#
+```C#
+            FluentRegex fr = FluentRegex.StartRegex()
+                .MatchLiteral("<")
+                .NamedGroup(FluentRegex.StartRegex().MatchWordCharacter.Repeated.OneOrMoreTimes, "tagname").Then
+                .MatchAnyWhiteSpaceCharacter.Repeated.ZeroOrMoreTimes.Then
+                .MatchAnyCharacterNotInSet(">").Repeated.ZeroOrMoreTimes.Then
+                .MatchLiteral(">").Then
+                .MatchAnyCharacterNotInSet("<").Repeated.ZeroOrMoreTimes.Then
+                .MatchLiteral("</").Then
+                .ReferenceNamedGroup("tagname").Then
+                .MatchLiteral(">");
+
+            foreach (Match m in fr.Matches("<abc>123</abc> <xyz style='color:white;'></xyz>"))
+            {
+                System.Diagnostics.Debug.Print(m.Value);
+            }
+```
