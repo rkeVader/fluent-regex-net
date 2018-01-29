@@ -7,9 +7,7 @@ When updating an 'intro' presentation and its support code and app, I decided a 
 enable newer users to leverage the power of RegExes.  
 
 This class is not considered complete and will likely evolve as my needs do, and as I receive feedback from 
-other developers.  
-
-To use, just include the file in your project. Then...  
+other developers. I have both VB.NET and C# versions of the same class. To use, just include the file of your choice in your project. Then...  
 
 Example Usage:  
 ### C#  
