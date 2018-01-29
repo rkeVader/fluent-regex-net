@@ -7,7 +7,9 @@ When updating an 'intro' presentation and its support code and app, I decided a 
 enable newer users to leverage the power of RegExes.  
 
 This class is not considered complete and will likely evolve as my needs do, and as I receive feedback from 
-other developers. I have both VB.NET and C# versions of the same class. To use, just include the file of your choice in your project. Then...  
+other developers. As is, the class currently supports the basics plus positive and negative assertions and named groups. I am looking at adding conditionals (if/then/else).  
+
+Both VB.NET and C# versions of the same class are available (and will continue to be so unless upkeep becomes an issue). To use, just include the file of your choice in your project. Then...  
 
 Example Usage (both generate the RegEx pattern /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,12}$/):  
 
