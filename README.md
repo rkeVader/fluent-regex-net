@@ -1,5 +1,5 @@
 # fluent-regex-net
-This project is an experiement in building a fluent interface for building Regular Expressioins in .NET  
+This project is an experiement in building a fluent interface for building Regular Expression (RegEx / RegExp) Patterns in .NET  
 This is distributed under the MIT License.
 
 I frequently find myself helping other developers to use Regular Expressions. 
