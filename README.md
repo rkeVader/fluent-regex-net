@@ -36,3 +36,24 @@ Example Usage:
                 .MatchAnything.Repeated.X_to_Y_Times(6, 12).Then  
                 .MatchEndOfLine;  
 ```
+```VB.NET
+Dim p As FluentRegex = FluentRegex.StartRegex() _
+            .MatchStartOfLine().Then _
+            .PositiveForwardAssertion(
+                FluentRegex.StartRegex() _
+                    .MatchAnything.Repeated.ZeroOrMoreTimes.Then _
+                    .MatchAnyUpperCaseLetter
+            ).Then _
+            .PositiveForwardAssertion(
+                FluentRegex.StartRegex() _
+                    .MatchAnything.Repeated.ZeroOrMoreTimes.Then _
+                    .MatchAnyLowerCaseLetter
+            ).Then _
+            .PositiveForwardAssertion(
+                FluentRegex.StartRegex() _
+                    .MatchAnything.Repeated.ZeroOrMoreTimes.Then _
+                    .MatchDigit
+            ).Then _
+            .MatchAnything.Repeated.X_to_Y_Times(6, 12).Then _
+            .MatchEndOfLine
+```
