@@ -9,6 +9,7 @@ This class is not considered complete and will likely evolve as my needs do, and
 other developers.  
 
 Example Usage:  
+```
             // Build RegEx pattern for password validation  
             // - Password must contain at least 1 Uppercase Letter  
             // - Password must contain at least 1 Lowercase Letter  
@@ -34,3 +35,4 @@ Example Usage:
                 ).Then  
                 .MatchAnything.Repeated.X_to_Y_Times(6, 12).Then  
                 .MatchEndOfLine;  
+```
