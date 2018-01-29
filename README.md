@@ -37,6 +37,12 @@ Example Usage:
                 ).Then  
                 .MatchAnything.Repeated.X_to_Y_Times(6, 12).Then  
                 .MatchEndOfLine;  
+                
+            if (fr.IsMatch("AbcDef123"))
+            {
+                // We Have a Valid Password!
+            }
+                
 ```
 ### VB.NET  
 ```VB.NET
@@ -59,4 +65,8 @@ Example Usage:
             ).Then _
             .MatchAnything.Repeated.X_to_Y_Times(6, 12).Then _
             .MatchEndOfLine
+
+        If p.IsMatch("AbcDef123") Then
+            ' We have a valid password
+        End If
 ```
