@@ -9,7 +9,7 @@ This class is not considered complete and will likely evolve as my needs do, and
 other developers.  
 
 Example Usage:  
-```
+```c#
             // Build RegEx pattern for password validation  
             // - Password must contain at least 1 Uppercase Letter  
             // - Password must contain at least 1 Lowercase Letter  
