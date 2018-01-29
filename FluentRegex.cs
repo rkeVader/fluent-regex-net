@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace FluentRegexTestingCSharp
+namespace FluentRegexCSharp
 {
     class FluentRegex
     {
@@ -552,19 +552,19 @@ namespace FluentRegexTestingCSharp
 
         public FluentRegex MatchAnyCharacterInSet(string pattern)
         {
-            _sb.AppendFormat("@[{0}]", pattern);
+            _sb.AppendFormat(@"[{0}]", pattern);
             return this;
         }
 
         public FluentRegex MatchAnyCharacterNotInSet(FluentRegex pattern)
         {
-            _sb.AppendFormat("@[^{0}]", pattern.ToString());
+            _sb.AppendFormat(@"[^{0}]", pattern.ToString());
             return this;
         }
 
         public FluentRegex MatchAnyCharacterNotInSet(string pattern)
         {
-            _sb.AppendFormat("@[^{0}]", pattern);
+            _sb.AppendFormat(@"[^{0}]", pattern);
             return this;
         }
 
@@ -585,7 +585,7 @@ namespace FluentRegexTestingCSharp
                                             string second,
                                             params string[] additionalChoices)
         {
-            _sb.AppendFormat("@({0}|{1}", first, second);
+            _sb.AppendFormat(@"({0}|{1}", first, second);
             foreach (string choice in additionalChoices)
                 _sb.AppendFormat(@"|{0}", choice);
             _sb.Append(")");
