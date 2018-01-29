@@ -9,6 +9,7 @@ This class is not considered complete and will likely evolve as my needs do, and
 other developers.  
 
 Example Usage:  
+### C#  
 ```c#
             // Build RegEx pattern for password validation  
             // - Password must contain at least 1 Uppercase Letter  
@@ -36,8 +37,9 @@ Example Usage:
                 .MatchAnything.Repeated.X_to_Y_Times(6, 12).Then  
                 .MatchEndOfLine;  
 ```
+### VB.NET  
 ```VB.NET
-Dim p As FluentRegex = FluentRegex.StartRegex() _
+    Dim p As FluentRegex = FluentRegex.StartRegex() _
             .MatchStartOfLine().Then _
             .PositiveForwardAssertion(
                 FluentRegex.StartRegex() _
