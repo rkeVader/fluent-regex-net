@@ -14,7 +14,7 @@ Both VB.NET and C# versions of the same class are available (and will continue t
 Example Usage (both generate the RegEx pattern /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).{6,12}$/):  
 
 ### C#  
-```c#
+```csharp
             // Build RegEx pattern for password validation  
             // - Password must contain at least 1 Uppercase Letter  
             // - Password must contain at least 1 Lowercase Letter  
@@ -55,7 +55,7 @@ Example Usage (both generate the RegEx pattern /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).
             }
 ```
 ### VB.NET  
-```VB.NET
+```vb.net
     Dim p As FluentRegex = FluentRegex.StartRegex() _
             .MatchStartOfLine().Then _
             .PositiveForwardAssertion(
@@ -91,7 +91,7 @@ Example Usage (both generate the RegEx pattern /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d).
 ## HTML Tag Matching  
 So  parsing HTML isn't always the best use of RegExes, but they do pose an excellent example of group and backreferences.  
 ### C#
-```C#
+```csharp
             FluentRegex fr = FluentRegex.StartRegex()
                 .MatchLiteral("<")
                 .NamedGroup(FluentRegex.StartRegex().MatchWordCharacter.Repeated.OneOrMoreTimes, "tagname").Then
